@@ -1,0 +1,6 @@
+{
+    "workbench.startupEditor": "none",
+    "task.autoDetect": "on",
+    "workbench.commandPalette.preserveInput": true,
+    "workbench.commandPalette.experimental.suggestCommands": true
+}
