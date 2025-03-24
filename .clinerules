@@ -1,0 +1,75 @@
+# Project Guidelines
+
+## Project Overview
+
+This project uses:
+
+1. Next.js v14 with Pages Router
+2. React v18
+3. TypeScript
+4. Tailwind CSS
+5. React Query
+6. NPM for package management
+
+## Directory Organization
+
+1. Place all source code in `/src`:
+   - Organize components and business logic in appropriate subdirectories
+   - Store Next.js pages in `src/pages`
+2. Store all static assets like images, fonts, and other media in `/public`
+
+## Development Instructions
+
+Development server is already running at http://localhost:3000 and already visible to the user. Don't run it again and don't ask user to open it in the browser.
+
+## Technical Requirements
+
+### TypeScript Implementation
+
+Define explicit types for:
+
+- Component props
+- API request/response structures
+- Data models
+
+### React Development
+
+1. Write functional components with hooks
+2. Maintain small, focused components
+3. Avoid prop drilling - use context/state management for complex state
+4. Use React Query for data fetching and mutations
+5. Implement forms using:
+   - `@components/ui/form`
+   - react-hook-form
+   - zod for validation
+
+### Next.js Usage
+
+1. Build API routes in `/src/pages/api`
+2. Implement data fetching using:
+   - `getServerSideProps` or
+   - `getStaticProps` as needed
+3. Handle images correctly:
+   - Use `next/image` for local images
+   - Use `img` tag for external URLs
+
+### Styling Guidelines
+
+1. Use Tailwind CSS as primary styling solution:
+   - Organize classes alphabetically
+   - Update theme in `tailwind.config.ts` and `src/styles/globals.css` to match project design
+   - Add `dark` class to a top level element to enable dark mode
+   - Import `cn` from `@/lib/utils` for class combinations
+2. Implement UI components using:
+   - shadcn components from `@/components/ui/`
+   - Customize components to match project design if needed
+   - Add more shadcn components using this command: `shadcn add <component>`
+3. Use lucide-react for icons
+
+### Code Style Guidelines
+
+1. Use 2 spaces for indentation, double quotes, and trailing commas. Omit semicolons. End files with a newline.
+
+2. Use named exports over default exports
+
+3. Use arrow functions with destructured parameters instead of unnamed parameters
